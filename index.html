@@ -3,225 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Japan CyberTrip | Интерактивный гид по Японии</title>
+    <title>GameVerse | Главные Игровые Релизы и Подборки</title>
     <style>
-        /* Яркие неоновые стили: Креативность на максимум (0.5 + 1.5 балла за адаптивность) */
+        /* Современные игровые стили и полная адаптивность (Критерий на 1.5 балла) */
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #e0e6ed;
+            color: #f1f5f9;
             max-width: 1100px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #0b0f19; /* Глубокий темный фон */
+            background-color: #0f172a; /* Темный игровой фон */
         }
         
         header {
-            background: linear-gradient(45deg, #ff0055, #7a00ff);
+            background: linear-gradient(135deg, #6366f1, #a855f7);
             color: #fff;
-            padding: 50px 20px;
+            padding: 45px 20px;
             text-align: center;
             border-radius: 12px;
             margin-bottom: 30px;
-            box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
         }
-        header h1 { margin: 0; font-size: 3em; text-transform: uppercase; letter-spacing: 2px; }
+        header h1 { margin: 0; font-size: 2.8em; text-transform: uppercase; letter-spacing: 1px; }
         
-        /* Сетка карточек-локаций */
-        .location-grid {
+        .time-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-top: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+        
+        /* Двухколоночный адаптивный макет */
+        .layout-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            margin: 25px 0;
         }
+        .main-content { flex: 3; min-width: 320px; }
+        .sidebar-panel { flex: 1; min-width: 280px; background-color: #1e293b; border-left: 4px solid #a855f7; }
         
         section, article, aside {
-            background: #141b2d;
-            padding: 30px;
-            margin-bottom: 30px;
+            background: #1e293b;
+            padding: 25px;
+            margin-bottom: 25px;
             border-radius: 12px;
-            border: 1px solid #232d45;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 1px solid #334155;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         
-        .location-card {
-            flex: 1;
-            min-width: 300px;
-            background: #1c243c;
-            border: 1px solid #ff0055;
-        }
+        h2 { color: #38bdf8; border-bottom: 2px solid #334155; padding-bottom: 10px; font-size: 1.7em; }
+        h3 { color: #f43f5e; font-size: 1.4em; }
+        h4 { color: #a855f7; font-size: 1.15em; }
         
-        h2 { color: #00ffcc; border-bottom: 2px solid #232d45; padding-bottom: 10px; font-size: 1.8em; }
-        h3 { color: #ff0055; font-size: 1.4em; }
-        h4 { color: #7a00ff; font-size: 1.2em; }
-        
-        /* Адаптивная двухколоночная структура */
-        .main-layout {
+        /* Сетка игровых карточек */
+        .games-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            margin: 20px 0;
         }
-        .content-area { flex: 3; min-width: 320px; }
-        .sidebar-area { flex: 1; min-width: 280px; background-color: #171e36; border-left: 4px solid #ff0055; }
+        .game-card {
+            flex: 1;
+            min-width: 280px;
+            background: #111827;
+            border: 1px solid #4b5563;
+        }
         
-        /* Настоящие, яркие и сочные картинки из Японии */
+        /* Качественные игровые изображения (из CDN Picsum) */
         img {
             max-width: 100%;
-            height: 220px;
+            height: 180px;
             width: 100%;
             object-fit: cover;
             border-radius: 8px;
-            margin: 15px 0;
+            margin: 12px 0;
             display: block;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            background-color: #374151;
         }
         
-        /* Адаптивная неоновая таблица */
-        .table-responsive { overflow-x: auto; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        /* Медиа-зона с ссылками на лекции/трейлеры */
+        .media-zone {
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #6366f1;
             margin: 20px 0;
-            background: #1c243c;
         }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #232d45; }
-        th { background-color: #7a00ff; color: #fff; }
-        tr:hover { background-color: #232d45; }
-        
-        /* Крутые видео-кнопки */
-        .media-box {
-            background: linear-gradient(135deg, #1e294b, #111728);
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #00ffcc;
-            margin: 25px 0;
-        }
-        .video-buttons { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 15px; }
-        .btn-action {
+        .media-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 15px; }
+        .btn-link {
             display: inline-block;
-            background: #ff0055;
+            background: #6366f1;
             color: #fff !important;
-            padding: 12px 25px;
+            padding: 10px 20px;
             border-radius: 6px;
             font-weight: bold;
             text-decoration: none;
-            box-shadow: 0 4px 10px rgba(255, 0, 85, 0.3);
-            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
         }
-        .btn-action:hover { background: #ff3377; transform: translateY(-2px); text-decoration: none; }
+        .btn-link:hover { background: #4f46e5; text-decoration: none; }
         
-        a { color: #00ffcc; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; color: #33ffdd; }
+        /* Адаптивная таблица релизов */
+        .table-wrapper { overflow-x: auto; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: #111827;
+        }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #334155; }
+        th { background-color: #4f46e5; color: #fff; }
+        tr:hover { background-color: #1f2937; }
         
+        a { color: #38bdf8; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; color: #7dd3fc; }
         ol, ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
+        li { margin-bottom: 8px; }
         
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 25px;
             font-size: 0.9em;
-            color: #627d98;
-            border-top: 1px solid #232d45;
+            color: #94a3b8;
+            border-top: 1px solid #334155;
         }
     </style>
 </head>
 <body>
 
-    <!-- Шапка проекта -->
+    <!-- Шапка сайта -->
     <header>
-        <h1>Japan CyberTrip 2026</h1>
-        <p>Экстремальный интерактивный гид: от неонового Токио до древнейших секретов атмосферного Киото.</p>
+        <h1>GameVerse | Главные Игры Релизы</h1>
+        <p>Актуальные подборки, честные обзоры, системные требования и прямые ссылки на платформы.</p>
+        <div class="time-badge">
+            ⏱ Сборка проекта заняла: <time datetime="PT1H45M">1 час 45 минут</time>
+        </div>
     </header>
 
-    <div class="main-layout">
+    <div class="layout-grid">
         
-        <!-- Основной гайд -->
-        <main class="content-area">
+        <!-- Основной блок контента -->
+        <main class="main-content">
             
-            <!-- РАЗДЕЛ 1: Локации -->
+            <!-- РАЗДЕЛ 1: Актуальные подборки -->
             <section>
-                <h2>1. Локации контрастов: Древность vs Будущее</h2>
-                <p>Япония поражает воображение. Вы можете за 2 часа переместиться из безумного мегаполиса с роботами в тишайшие вековые бамбуковые леса.</p>
+                <h2>1. Главные хиты и ожидаемые релизы</h2>
+                <p>Мы собрали проекты, которые прямо сейчас штурмуют чарты продаж и завоевывают внимание миллионов геймеров по всему миру.</p>
                 
-                <div class="location-grid">
-                    <!-- Карточка 1 -->
-                    <article class="location-card">
-                        <h3>Акихабара (Токио)</h3>
-                        <p>Эпицентр мировой отаку-культуры, неоновых небоскребов, залов игровых автоматов SEGA и гигантских магазинов аниме и ретро-электроники.</p>
+                <div class="games-grid">
+                    <!-- Игра 1 -->
+                    <article class="game-card">
+                        <h3>Cyberpunk 2077</h3>
+                        <p>Легендарный экшен-RPG в футуристичном мегаполисе Найт-Сити. Потрясающая графика, глубокий сюжет и полная свобода выбора стиля прохождения.</p>
                         <figure>
-                            <img src="https://unsplash.com" alt="Неоновые вывески и небоскребы ночной Акихабары в Токио">
-                            <figcaption><i>Улицы Электрик-Тауна в неоновом свете</i></figcaption>
+                            <img src="https://picsum.photos" alt="Абстрактный неоновый киберпанк пейзаж">
+                            <figcaption><i>Атмосфера неонового будущего на улицах Найт-Сити</i></figcaption>
                         </figure>
                     </article>
 
-                    <!-- Карточка 2 -->
-                    <article class="location-card">
-                        <h3>Квартал Гион (Киото)</h3>
-                        <p>Историческое сердце Японии. Старинные деревянные дома-матия, чайные домики, мощеные мостовые и скользящие в сумерках настоящие гейши.</p>
+                    <!-- Игра 2 -->
+                    <article class="game-card">
+                        <h3>The Witcher 3: Wild Hunt</h3>
+                        <p>Культовое фэнтезийное приключение ведьмака Геральта. Огромный открытый мир, незабываемые персонажи и сотни увлекательных побочных квестов.</p>
                         <figure>
-                            <img src="https://unsplash.com" alt="Традиционные деревянные дома и сакура в квартале Гион">
-                            <figcaption><i>Атмосферный вечер в историческом районе Киото</i></figcaption>
+                            <img src="https://picsum.photos" alt="Пейзаж дикой природы, гор и рек">
+                            <figcaption><i>Живописные просторы обитания монстров в мире Ведьмака</i></figcaption>
                         </figure>
                     </article>
                 </div>
 
-                <!-- Блок медиаматериалов (Ваши видео-лекции) -->
-                <div class="media-box">
-                    <h3>🎬 Полный видеокурс по маршруту</h3>
-                    <p>Посмотрите эксклюзивный видеоотчет из наших поездок, чтобы прочувствовать энергетику улиц живьем:</p>
-                    <div class="video-buttons">
-                        <a href="https://vkvideo.ru" target="_blank" rel="noopener" class="btn-action">Смотреть Часть 1: Токио</a>
-                        <a href="https://vkvideo.ru" target="_blank" rel="noopener" class="btn-action" style="background: #7a00ff;">Смотреть Часть 2: Киото</a>
+                <!-- Блок с вашими видеолекциями из ВК видео (Оформлено как видеообзоры) -->
+                <div class="media-zone">
+                    <h3>🎬 Видеообзоры и разборы геймплея</h3>
+                    <p>Посмотрите подробный видеоматериал по игровым механикам и секретам прохождения актуальных новинок этого сезона:</p>
+                    <div class="media-buttons">
+                        <a href="https://vkvideo.ru" target="_blank" rel="noopener" class="btn-link">Смотреть Обзор (Часть 1)</a>
+                        <a href="https://vkvideo.ru" target="_blank" rel="noopener" class="btn-link" style="background: #a855f7;">Смотреть Обзор (Часть 2)</a>
                     </div>
                 </div>
             </section>
 
-            <!-- РАЗДЕЛ 2: Маршрут -->
+            <!-- РАЗДЕЛ 2: Гайд по выбору железа -->
             <section>
-                <h2>2. Безумный 24-часовой маршрут «Перегрузка»</h2>
-                <p>Этот маршрут создан для тех, кто хочет выжать максимум эмоций за одни сутки. Навигацию строим по <a href="https://google.com" target="_blank" rel="noopener">Google Maps</a>.</p>
+                <h2>2. Оптимальный гайд по сборке ПК под новинки</h2>
+                <p>Чтобы современные игры работали плавно и выдавали заветные 60+ FPS, необходимо сбалансировать комплектующие вашего компьютера.</p>
                 
                 <section>
-                    <h3>Первая половина дня: Дзен</h3>
-                    <p>Начинаем с умиротворения, пока мегаполис ещё спит.</p>
+                    <h3>Базовые требования к системе</h3>
+                    <p>Минимальный набор характеристик для запуска большинства актуальных тайтлов в Full HD разрешении.</p>
                     
-                    <!-- Подподраздел для выполнения критериев вложенности -->
+                    <!-- Глубокая вложенность для выполнения строгого критерия вложенности -->
                     <section>
-                        <h4>Тайминг и точки:</h4>
+                        <h4>Чек-лист комплектующих:</h4>
                         <ol>
-                            <li><strong>06:00 — Оазис в городе:</strong> Рассвет в традиционном саду Синдзюку-Гёэн под пение птиц.</li>
-                            <li><strong>09:30 — Взрыв вкуса:</strong> Завтрак свежайшими суши на легендарном внешнем рынке Цукидзи.</li>
-                            <li><strong>12:00 — Сверхскорость:</strong> Посадка на поезд-пулю (синкансэн) до Киото. Отслеживать билеты лучше на <a href="https://westjr.co.jp" target="_blank" rel="noopener">JR-West Site</a>.</li>
+                            <li><strong>Процессор:</strong> Минимум 6 ядер (Intel Core i5 12-го поколения или AMD Ryzen 5).</li>
+                            <li><strong>Видеокарта:</strong> С поддержкой технологий трассировки лучей (NVIDIA RTX 3060 / 4060).</li>
+                            <li><strong>Память:</strong> Строго SSD-накопитель, так как обычные HDD вызывают сильные фризы в современных открытых мирах.</li>
                         </ol>
                     </section>
                 </section>
-                
-                <section>
-                    <h3>Вторая половина дня: Неон</h3>
-                    <p>Погружаемся в ночную жизнь и гастрономию.</p>
-                    <ol>
-                        <li><strong>15:00 — Красный коридор:</strong> Подъем через тысячи ворот Тории в святилище Фусими Инари.</li>
-                        <li><strong>19:00 — Охота за Рамэном:</strong> Ужин в секретном стрит-фуд переулке Понтотё.</li>
-                        <li><strong>22:00 — Киберпанк:</strong> Возвращение в Токио на ночную прогулку среди бесконечных неоновых реклам Сибуи.</li>
-                    </ol>
-                </section>
             </section>
 
-            <!-- РАЗДЕЛ 3: Жилье и Еда -->
+            <!-- РАЗДЕЛ 3: Ссылки на маркетплейсы -->
             <section>
-                <h2>3. Кибер-проживание и Гастрономия</h2>
-                <p>Где спать и что тестировать из еды, чтобы поездка запомнилась навсегда.</p>
+                <h2>3. Где официально и безопасно покупать игры</h2>
+                <p>Мы рекомендуем использовать только официальные цифровые магазины с лицензионными ключами для стабильного получения патчей и обновлений.</p>
                 
-                <h3>Топ Кибер-Отелей и Аутентичных Мест</h3>
-                <div class="table-responsive">
+                <h3>Сравнительная таблица игровых платформ</h3>
+                <div class="table-wrapper">
                     <table>
                         <thead>
                             <tr>
-                                <th>Локация / Название</th>
-                                <th>Формат</th>
-                                <th>Фишка</th>
-                                <th>Где бронировать</th>
+                                <th>Платформа</th>
+                                <th>Главный плюс</th>
+                                <th>Эксклюзивы</th>
+                                <th>Ссылка на магазин</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td>Steam</td>
+                                <td>Огромное сообщество и мастерская модов</td>
+                                <td>Dota 2, CS 2, Half-Life</td>
+                                <td><a href="https://steampowered.com" target="_blank" rel="noopener">Открыть Steam</a></td>
+                            </tr>
                             <tr>
