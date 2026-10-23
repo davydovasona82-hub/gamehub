@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Ответы о безопасной загрузке игр и форма подписки на новости GameHub.">
+<meta name="theme-color" content="#10142b">
+<title>Вопросы и ответы, подписка — GameHub</title>
+<link rel="icon" href="images/hero.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,600;0,800;1,800&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body id="top">
+<a class="skip" href="#main">Перейти к содержимому</a>
+<header class="site"><div class="wrap bar">
+<a class="logo" href="index.html">Game<b>Hub</b></a>
+<button class="chip menu-btn" type="button" aria-expanded="false" aria-controls="nav">Меню</button>
+<nav id="nav" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li><li><a href="games.html">Каталог</a></li><li><a href="compare.html">Сравнение</a></li><li><a href="faq.html" aria-current="page">Вопросы</a></li></ul></nav>
+<button class="chip theme-btn" type="button" aria-pressed="false">Светлая тема</button>
+</div></header>
+<main id="main">
+<div class="wrap pagehead"><nav aria-label="Хлебные крошки"><ol class="crumbs"><li><a href="index.html">Главная</a></li><li aria-current="page">Вопросы</li></ol></nav></div>
+<section class="block" aria-labelledby="h-faq"><div class="wrap"><h1 id="h-faq">Вопросы и ответы</h1>
+<details><summary>Как безопасно скачивать игры?</summary><p>Используйте ссылки с официальных сайтов, Steam, Google Play и App Store. Не скачивайте «взломанные» версии и установщики из чатов: в них часто прячут вирусы.</p></details>
+<details><summary>Бесплатные игры действительно бесплатные?</summary><p>Играть можно без оплаты, но внутри бывают платные косметические предметы и пропуска. Проверяйте, включены ли покупки на вашем устройстве, особенно если играет ребёнок.</p></details>
+<details><summary>Запустятся ли игры на слабом устройстве?</summary><p>Минимальные требования указаны на официальных страницах игр. Мобильные версии обычно нетребовательны, а в Minecraft можно снизить дальность прорисовки.</p></details>
+</div></section>
+<section class="block" aria-labelledby="h-sub"><div class="wrap"><h2 id="h-sub">Подписка на новости</h2>
+<form id="sub" class="sub">
+<div><label for="name">Имя</label><input id="name" name="name" type="text" required minlength="2" autocomplete="given-name"></div>
+<div><label for="email">Электронная почта</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+<div><label for="fav-game">Любимая игра</label><select id="fav-game" name="game"><option>PUBG MOBILE</option><option>Roblox</option><option>Counter-Strike 2</option><option>Dota 2</option><option>Minecraft</option><option>Fortnite</option><option>League of Legends</option><option>Valorant</option></select></div>
+<div><label><input type="checkbox" name="agree" required>Согласен получать письма (учебный проект)</label></div>
+<div><button class="btn" type="submit">Подписаться</button></div><p id="status" role="status"></p></form></div></section>
+</main>
+<footer><div class="wrap">
+<address>Автор: <a href="mailto:you@example.com">Ваше имя</a></address>
+<p><small>© 2026 GameHub. Учебный проект. Названия игр и компаний принадлежат их правообладателям, обложки — условные иллюстрации. Доступность загрузки зависит от региона.</small></p>
+<p><a href="#top">Наверх</a></p>
+</div></footer>
+</body>
+</html>
